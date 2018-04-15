@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="12527" started-at="2018-04-15T17:48:17Z" finished-at="2018-04-15T17:48:29Z">
+  <suite name="Default suite" duration-ms="20017" started-at="2018-04-15T18:44:26Z" finished-at="2018-04-15T18:44:46Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="12527" started-at="2018-04-15T17:48:17Z" finished-at="2018-04-15T17:48:29Z">
+    <test name="Default test" duration-ms="20017" started-at="2018-04-15T18:44:26Z" finished-at="2018-04-15T18:44:46Z">
       <class name="CricBuzz.CricBuzz.Cricbuzz">
-        <test-method status="PASS" signature="cricbuzztest()[pri:0, instance:CricBuzz.CricBuzz.Cricbuzz@553f17c]" name="cricbuzztest" duration-ms="12496" started-at="2018-04-15T17:48:17Z" finished-at="2018-04-15T17:48:29Z">
+        <test-method status="PASS" signature="cricbuzztest()[pri:0, instance:CricBuzz.CricBuzz.Cricbuzz@553f17c]" name="cricbuzztest" duration-ms="19994" started-at="2018-04-15T18:44:26Z" finished-at="2018-04-15T18:44:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cricbuzztest -->
       </class> <!-- CricBuzz.CricBuzz.Cricbuzz -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

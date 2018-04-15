@@ -44,18 +44,19 @@ String ConsumerKey="ZD40Ccigo2MQMs0rtI2Us9Lx1";
 		
 		String score=driver.findElement(By.xpath("//div[@class='cb-min-bat-rw']/h2")).getText();
 	   
-		String Progress=driver.findElement(By.xpath("(//div[@class='cb-text-inprogress'])[2]")).getText();
+		//String Progress=driver.findElement(By.xpath("(//div[@class='cb-text-inprogress'])[2]")).getText();
 		
 		
 		
 		System.out.println(score);
 		
-		System.out.println(Progress);
+		//System.out.println(Progress);
 		
 	given()
 	    .auth()
 	    .oauth(ConsumerKey,ConsumerSecret,AccessToken,TokenSecret)
-        .queryParam("status",score+"\n" +Progress +"\n" +"#IPL2018 #KXIPvCSK")
+       // .queryParam("status",score+"\n" +Progress +"\n" +"#IPL2018 #KXIPvCSK")
+	    .queryParam("status",score)
     .when()
         .post("update.json");
 
