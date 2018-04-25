@@ -18,8 +18,10 @@ public class Cricbuzz {
 
 
 	@Test
-	public void cricbuzztest() {
-String ConsumerKey="ZD40Ccigo2MQMs0rtI2Us9Lx1";
+	public void cricbuzztest() throws InterruptedException {
+		
+		
+		String ConsumerKey="ZD40Ccigo2MQMs0rtI2Us9Lx1";
 		
 		String ConsumerSecret="JAUq6FkYbF2RYdORBiZDSRMbSB0NkUML0K4jxwVnZtzwj2TLyW";
 		
@@ -38,29 +40,34 @@ String ConsumerKey="ZD40Ccigo2MQMs0rtI2Us9Lx1";
 		WebDriver driver=new ChromeDriver(chromeOptions);
 		
 		
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		while(true)
+		{
 		
-		driver.get("http://www.cricbuzz.com/live-cricket-scores/20072/kxip-vs-csk-12th-match-indian-premier-league-2018");
+		driver.get("http://www.cricbuzz.com/live-cricket-scores/20074/mi-vs-rcb-14th-match-indian-premier-league-2018");
 		
 		String score=driver.findElement(By.xpath("//div[@class='cb-min-bat-rw']/h2")).getText();
 	   
-		//String Progress=driver.findElement(By.xpath("(//div[@class='cb-text-inprogress'])[2]")).getText();
-		
-		
+		String Progress=driver.findElement(By.xpath("(//div[@class='cb-text-inprogress'])[2]")).getText();
 		
 		System.out.println(score);
 		
-		//System.out.println(Progress);
+		System.out.println(Progress);
 		
 	given()
 	    .auth()
 	    .oauth(ConsumerKey,ConsumerSecret,AccessToken,TokenSecret)
-       // .queryParam("status",score+"\n" +Progress +"\n" +"#IPL2018 #KXIPvCSK")
-	    .queryParam("status",score)
+       .queryParam("status",score+"\n" +Progress +"\n" +"#MIvRCB  #RCBvMI #PlayBold")
+	   // .queryParam("status",score)
     .when()
         .post("update.json");
+	
+	Thread.sleep(60000);
 
-		driver.quit(); 
+	
+	} 
+		
 	}
-	}
+	
 
+}
