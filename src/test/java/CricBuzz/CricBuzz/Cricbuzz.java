@@ -41,10 +41,8 @@ public class Cricbuzz {
 		
 		
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		while(true)
-		{
 		
-		driver.get("http://www.cricbuzz.com/live-cricket-scores/20074/mi-vs-rcb-14th-match-indian-premier-league-2018");
+		driver.get("http://www.cricbuzz.com/live-cricket-scores/20084/rcb-vs-csk-24th-match-indian-premier-league-2018");
 		
 		String score=driver.findElement(By.xpath("//div[@class='cb-min-bat-rw']/h2")).getText();
 	   
@@ -57,17 +55,16 @@ public class Cricbuzz {
 	given()
 	    .auth()
 	    .oauth(ConsumerKey,ConsumerSecret,AccessToken,TokenSecret)
-       .queryParam("status",score+"\n" +Progress +"\n" +"#MIvRCB  #RCBvMI #PlayBold")
+       .queryParam("status",score+"\n" +Progress +"\n" +"#CSKvRCB  #RCBvCSK #PlayBold")
 	   // .queryParam("status",score)
     .when()
         .post("update.json");
 	
-	Thread.sleep(60000);
-
+	driver.quit();
 	
 	} 
+
 		
 	}
 	
 
-}
