@@ -21,13 +21,13 @@ public class Cricbuzz {
 	public void cricbuzztest() throws InterruptedException {
 		
 		
-		String ConsumerKey="ZD40Ccigo2MQMs0rtI2Us9Lx1";
+		String ConsumerKey="Enter your Consumer Key";
 		
-		String ConsumerSecret="JAUq6FkYbF2RYdORBiZDSRMbSB0NkUML0K4jxwVnZtzwj2TLyW";
+		String ConsumerSecret="Enter your Consumer Secret";
 		
-		String AccessToken="985546526326849536-KFpYfp1LFuz5mld0JmlyeogxyUidCg7";
+		String AccessToken="Enter Access Token";
 		
-	    String TokenSecret="ENTa0yfFX9fsrR90oo6UcKFHu9TDMACCmpEHsiVI7vtId";
+	    String TokenSecret="Enter TokenSecret";
 	    
 		RestAssured.baseURI="https://api.twitter.com";
 		
